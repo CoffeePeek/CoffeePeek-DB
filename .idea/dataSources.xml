@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:postgresql://switchyard.proxy.rlwy.net:38053/railway</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="CoffeePeekDb.Prod" uuid="4a150432-9799-4726-98ca-7b8205882d6a">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://dpg-culr4d3qf0us73di168g-a.frankfurt-postgres.render.com:5432/dbcoffeepeek</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

@@ -24,26 +24,26 @@ BEGIN
   SELECT "Id" INTO minskCityId FROM "Cities" WHERE "Name" = 'Минск';
 
   -- Вставка улиц
-  INSERT INTO "Streets" ("Name", "CityId") VALUES ('Некрасова', minskCityId);
-  INSERT INTO "Streets" ("Name", "CityId") VALUES ('Богдана Хмельницкого', minskCityId);
+  INSERT INTO "Streets" ("Name", "CityId", "CreatedAt") VALUES ('Некрасова', minskCityId, CURRENT_DATE);
+  INSERT INTO "Streets" ("Name", "CityId", "CreatedAt") VALUES ('Богдана Хмельницкого', minskCityId, CURRENT_DATE);
   SELECT "Id" INTO nekrasovaStreetId FROM "Streets" WHERE "Name" = 'Некрасова' AND "CityId" = minskCityId;
   SELECT "Id" INTO bogdanaKhmelnitskogoStreetId FROM "Streets" WHERE "Name" = 'Богдана Хмельницкого' AND "CityId" = minskCityId;
 
   -- Вставка адресов
-  INSERT INTO "Addresses" ("CityId", "StreetId", "BuildingNumber") VALUES (minskCityId, nekrasovaStreetId, '10');
+  INSERT INTO "Addresses" ("CityId", "StreetId", "BuildingNumber", "CreatedAt") VALUES (minskCityId, nekrasovaStreetId, '10', CURRENT_DATE);
   SELECT "Id" INTO kofeyokAddressId FROM "Addresses" WHERE "CityId" = minskCityId AND "StreetId" = nekrasovaStreetId AND "BuildingNumber" = '10';
-  INSERT INTO "Addresses" ("CityId", "StreetId", "BuildingNumber") VALUES (minskCityId, bogdanaKhmelnitskogoStreetId, '8');
+  INSERT INTO "Addresses" ("CityId", "StreetId", "BuildingNumber", "CreatedAt") VALUES (minskCityId, bogdanaKhmelnitskogoStreetId, '8', CURRENT_DATE);
   SELECT "Id" INTO coffeeProfileAddressId FROM "Addresses" WHERE "CityId" = minskCityId AND "StreetId" = bogdanaKhmelnitskogoStreetId AND "BuildingNumber" = '8';
 
   -- Вставка кофеен
-  INSERT INTO "Shops" ("Name", "AddressId", "Status") VALUES ('Кофеёк', kofeyokAddressId, 1);
+  INSERT INTO "Shops" ("Name", "AddressId", "Status", "CreatedAt") VALUES ('Кофеёк', kofeyokAddressId, 1, CURRENT_DATE);
   SELECT "Id" INTO kofeyokCoffeeShopId FROM "Shops" WHERE "Name" = 'Кофеёк';
-  INSERT INTO "Shops" ("Name", "AddressId", "Status") VALUES ('Кофе Профиль', coffeeProfileAddressId, 1);
+  INSERT INTO "Shops" ("Name", "AddressId", "Status", "CreatedAt") VALUES ('Кофе Профиль', coffeeProfileAddressId, 1, CURRENT_DATE);
   SELECT "Id" INTO coffeeProfileCoffeeShopId FROM "Shops" WHERE "Name" = 'Кофе Профиль';
 
   -- Вставка расписания
-  INSERT INTO "Schedules" ("ShopId", "DayOfWeek", "OpeningTime", "ClosingTime", "IsOpen24Hours") VALUES (kofeyokCoffeeShopId, 1, '09:00:00', '21:00:00', false);
-  INSERT INTO "Schedules" ("ShopId", "DayOfWeek", "OpeningTime", "ClosingTime", "IsOpen24Hours") VALUES (coffeeProfileCoffeeShopId, 1, '08:00:00', '18:00:00', false);
+  INSERT INTO "Schedules" ("ShopId", "DayOfWeek", "OpeningTime", "ClosingTime", "IsOpen24Hours", "CreatedAt") VALUES (kofeyokCoffeeShopId, 1, '09:00:00', '21:00:00', false, CURRENT_DATE);
+  INSERT INTO "Schedules" ("ShopId", "DayOfWeek", "OpeningTime", "ClosingTime", "IsOpen24Hours", "CreatedAt") VALUES (coffeeProfileCoffeeShopId, 1, '08:00:00', '18:00:00', false, CURRENT_DATE);
 
 
   -- Выборка для проверки результатов
@@ -99,27 +99,27 @@ BEGIN
     -- Генерация случайных данных
 
     -- Вставка улиц (случайные названия)
-    INSERT INTO "Streets" ("Name", "CityId") VALUES ('Улица ' || i::text, minskCityId);
-    INSERT INTO "Streets" ("Name", "CityId") VALUES ('Проспект ' || i::text, minskCityId);
+    INSERT INTO "Streets" ("Name", "CityId", "CreatedAt") VALUES ('Улица ' || i::text, minskCityId, current_date);
+    INSERT INTO "Streets" ("Name", "CityId", "CreatedAt") VALUES ('Проспект ' || i::text, minskCityId, current_date);
     SELECT "Id" INTO nekrasovaStreetId FROM "Streets" WHERE "Name" = 'Улица ' || i::text AND "CityId" = minskCityId;  -- <--- ВОТ ТУТ НУЖНО БЫЛО ИСПРАВИТЬ
     SELECT "Id" INTO bogdanaKhmelnitskogoStreetId FROM "Streets" WHERE "Name" = 'Проспект ' || i::text AND "CityId" = minskCityId; -- <--- И ТУТ
 
     -- Вставка адресов (случайные номера домов)
-    INSERT INTO "Addresses" ("CityId", "StreetId", "BuildingNumber") VALUES (minskCityId, nekrasovaStreetId, i::text);
+    INSERT INTO "Addresses" ("CityId", "StreetId", "BuildingNumber", "CreatedAt") VALUES (minskCityId, nekrasovaStreetId, i::text, current_date);
     SELECT "Id" INTO kofeyokAddressId FROM "Addresses" WHERE "CityId" = minskCityId AND "StreetId" = nekrasovaStreetId AND "BuildingNumber" = i::text;
-    INSERT INTO "Addresses" ("CityId", "StreetId", "BuildingNumber") VALUES (minskCityId, bogdanaKhmelnitskogoStreetId, (i * 2)::text);
+    INSERT INTO "Addresses" ("CityId", "StreetId", "BuildingNumber", "CreatedAt") VALUES (minskCityId, bogdanaKhmelnitskogoStreetId, (i * 2)::text, current_date);
     SELECT "Id" INTO coffeeProfileAddressId FROM "Addresses" WHERE "CityId" = minskCityId AND "StreetId" = bogdanaKhmelnitskogoStreetId AND "BuildingNumber" = (i * 2)::text;
 
 
     -- Вставка кофеен (случайные названия)
-    INSERT INTO "Shops" ("Name", "AddressId", "Status") VALUES ('Кофе ' || i::text, kofeyokAddressId, 1);
+    INSERT INTO "Shops" ("Name", "AddressId", "Status", "CreatedAt") VALUES ('Кофе ' || i::text, kofeyokAddressId, 1, current_date);
     SELECT "Id" INTO kofeyokCoffeeShopId FROM "Shops" WHERE "Name" = 'Кофе ' || i::text;
-    INSERT INTO "Shops" ("Name", "AddressId", "Status") VALUES ('Кофейня ' || i::text, coffeeProfileAddressId, 2);
+    INSERT INTO "Shops" ("Name", "AddressId", "Status", "CreatedAt") VALUES ('Кофейня ' || i::text, coffeeProfileAddressId, 2, current_date);
     SELECT "Id" INTO coffeeProfileCoffeeShopId FROM "Shops" WHERE "Name" = 'Кофейня ' || i::text;
 
     -- Вставка расписания (можно сделать случайным)
-    INSERT INTO "Schedules" ("ShopId", "DayOfWeek", "OpeningTime", "ClosingTime", "IsOpen24Hours") VALUES (kofeyokCoffeeShopId, 1, '09:00:00', '21:00:00', false);
-    INSERT INTO "Schedules" ("ShopId", "DayOfWeek", "OpeningTime", "ClosingTime", "IsOpen24Hours") VALUES (coffeeProfileCoffeeShopId, 1, '08:00:00', '18:00:00', false);
+    INSERT INTO "Schedules" ("ShopId", "DayOfWeek", "OpeningTime", "ClosingTime", "IsOpen24Hours", "CreatedAt") VALUES (kofeyokCoffeeShopId, 1, '09:00:00', '21:00:00', false, current_date);
+    INSERT INTO "Schedules" ("ShopId", "DayOfWeek", "OpeningTime", "ClosingTime", "IsOpen24Hours", "CreatedAt") VALUES (coffeeProfileCoffeeShopId, 1, '08:00:00', '18:00:00', false, current_date);
   END LOOP;
 
   -- Выборка для проверки результатов (можно изменить)
@@ -130,8 +130,8 @@ END $$;
 COMMIT TRANSACTION;
 
 
-INSERT INTO "ShopPhoto" ("Url", "ShopId")
-SELECT 'https://habrastorage.org/webt/jk/vy/z6/jkvyz62astocejwzu4ftlqxhl_0.jpeg', s."Id"  -- Замените 'your_default_url' на нужный URL
+INSERT INTO "ShopPhoto" ("Url", "ShopId", "CreatedAt")
+SELECT 'https://habrastorage.org/webt/jk/vy/z6/jkvyz62astocejwzu4ftlqxhl_0.jpeg', s."Id", current_date  -- Замените 'your_default_url' на нужный URL
 FROM "Shops" s
 WHERE NOT EXISTS (
     SELECT 1

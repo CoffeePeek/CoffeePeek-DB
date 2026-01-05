@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourcePerFileMappings">
-    <file url="file://$PROJECT_DIR$/queries/Query_1.sql" value="51da5079-3a2f-4016-a32c-cb4312222054" />
-    <file url="file://$PROJECT_DIR$/queries/Query_3.sql" value="ea7d7218-7f1e-433a-b367-69ed699f4170" />
   </component>
 </project>

@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
-    <file url="file://$PROJECT_DIR$/25.02.25 CREATE INITIAL ENTITIES.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/queries/28.01.2026 COFFEE_BEANS.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/queries/28.01.2026 INITIAL_BREW_METHODS.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/queries/28.01.2026 INITIAL_CITIES.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/queries/28.01.2026 INITIAL_EQUIPMENTS.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/queries/28.01.2026 INITIAL_ROASTERS.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/queries/28.01.2026 INITIAL_ROLES.sql" dialect="PostgreSQL" />
   </component>
 </project>

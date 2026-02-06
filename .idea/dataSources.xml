@@ -15,5 +15,12 @@
       <jdbc-url>jdbc:postgresql://trolley.proxy.rlwy.net:41639/</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="cpmediadb" uuid="8e019f9d-7985-40c7-9011-83788b183f20">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:55729/cpmediadb</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

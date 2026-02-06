@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourcePerFileMappings">
-    <file url="file://$PROJECT_DIR$/queries/28.01.2026 COFFEE_BEANS.sql" value="f3616c95-0619-4a3d-8c06-5249208c605a" />
-    <file url="file://$PROJECT_DIR$/queries/28.01.2026 INITIAL_BREW_METHODS.sql" value="f3616c95-0619-4a3d-8c06-5249208c605a" />
-    <file url="file://$PROJECT_DIR$/queries/28.01.2026 INITIAL_CITIES.sql" value="f3616c95-0619-4a3d-8c06-5249208c605a" />
-    <file url="file://$PROJECT_DIR$/queries/28.01.2026 INITIAL_EQUIPMENTS.sql" value="f3616c95-0619-4a3d-8c06-5249208c605a" />
-    <file url="file://$PROJECT_DIR$/queries/28.01.2026 INITIAL_ROASTERS.sql" value="f3616c95-0619-4a3d-8c06-5249208c605a" />
-    <file url="file://$PROJECT_DIR$/queries/28.01.2026 INITIAL_ROLES.sql" value="f3616c95-0619-4a3d-8c06-5249208c605a" />
+    <file url="file://$PROJECT_DIR$/queries/28.01.2026 COFFEE_BEANS.sql" value="b6f20a71-c32f-4c43-b34c-13f1ff58be2b" />
+    <file url="file://$PROJECT_DIR$/queries/28.01.2026 INITIAL_BREW_METHODS.sql" value="b6f20a71-c32f-4c43-b34c-13f1ff58be2b" />
+    <file url="file://$PROJECT_DIR$/queries/28.01.2026 INITIAL_CITIES.sql" value="b6f20a71-c32f-4c43-b34c-13f1ff58be2b" />
+    <file url="file://$PROJECT_DIR$/queries/28.01.2026 INITIAL_EQUIPMENTS.sql" value="b6f20a71-c32f-4c43-b34c-13f1ff58be2b" />
+    <file url="file://$PROJECT_DIR$/queries/28.01.2026 INITIAL_ROASTERS.sql" value="b6f20a71-c32f-4c43-b34c-13f1ff58be2b" />
+    <file url="file://$PROJECT_DIR$/queries/28.01.2026 INITIAL_ROLES.sql" value="b6f20a71-c32f-4c43-b34c-13f1ff58be2b" />
   </component>
 </project>

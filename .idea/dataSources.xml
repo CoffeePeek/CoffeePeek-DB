@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="CP.dev" uuid="f3616c95-0619-4a3d-8c06-5249208c605a">
-      <driver-ref>postgresql</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://caboose.proxy.rlwy.net:12648/railway</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
-    </data-source>
     <data-source source="LOCAL" name="CP.prod" uuid="b6f20a71-c32f-4c43-b34c-13f1ff58be2b">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
@@ -19,7 +12,7 @@
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:55729/cpmediadb</jdbc-url>
+      <jdbc-url>jdbc:postgresql://localhost:5432/cpmediadb</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

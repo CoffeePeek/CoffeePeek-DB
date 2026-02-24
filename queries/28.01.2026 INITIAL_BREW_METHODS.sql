@@ -1,23 +1,29 @@
-INSERT INTO "BrewMethods" ("Id", "Name", "CreatedAtUtc", "UpdatedAtUtc")
+INSERT INTO "BrewMethods" ("Id", "Name", "Category", "CreatedAtUtc", "UpdatedAtUtc")
 VALUES
-    (gen_random_uuid(), 'Эспрессо', NOW(), NOW()),
-    (gen_random_uuid(), 'Американо', NOW(), NOW()),
-    (gen_random_uuid(), 'Капучино', NOW(), NOW()),
-    (gen_random_uuid(), 'Латте', NOW(), NOW()),
-    (gen_random_uuid(), 'Флэт Уайт', NOW(), NOW()),
-    (gen_random_uuid(), 'Раф', NOW(), NOW()),
-    (gen_random_uuid(), 'Кортадо', NOW(), NOW()),
-    (gen_random_uuid(), 'Макиато', NOW(), NOW()),
+    -- Category: Pressure (1)
+    (gen_random_uuid(), 'Espresso', 1, CURRENT_TIMESTAMP, NULL),
+    (gen_random_uuid(), 'Aeropress', 1, CURRENT_TIMESTAMP, NULL),
+    (gen_random_uuid(), 'Moka Pot', 1, CURRENT_TIMESTAMP, NULL),
+    (gen_random_uuid(), 'Flair Manual Espresso', 1, CURRENT_TIMESTAMP, NULL),
 
-    -- Альтернативные методы
-    (gen_random_uuid(), 'V60', NOW(), NOW()),
-    (gen_random_uuid(), 'Chemex', NOW(), NOW()),
-    (gen_random_uuid(), 'Аэропресс', NOW(), NOW()),
-    (gen_random_uuid(), 'Френч-пресс', NOW(), NOW()),
-    (gen_random_uuid(), 'Калита', NOW(), NOW()),
-    (gen_random_uuid(), 'Турка', NOW(), NOW()),
-    (gen_random_uuid(), 'Сифон', NOW(), NOW()),
-    (gen_random_uuid(), 'Колд брю', NOW(), NOW()),
-    (gen_random_uuid(), 'Фильтр-кофе', NOW(), NOW()),
-    (gen_random_uuid(), 'Пуровер', NOW(), NOW())
-ON CONFLICT DO NOTHING;
+    -- Category: Gravity (2)
+    (gen_random_uuid(), 'Hario V60', 2, CURRENT_TIMESTAMP, NULL),
+    (gen_random_uuid(), 'Chemex', 2, CURRENT_TIMESTAMP, NULL),
+    (gen_random_uuid(), 'Kalita Wave', 2, CURRENT_TIMESTAMP, NULL),
+    (gen_random_uuid(), 'Origami Dripper', 2, CURRENT_TIMESTAMP, NULL),
+    (gen_random_uuid(), 'Batch Brew', 2, CURRENT_TIMESTAMP, NULL),
+    (gen_random_uuid(), 'Woodneck (Nel Drip)', 2, CURRENT_TIMESTAMP, NULL),
+
+    -- Category: Immersion (3)
+    (gen_random_uuid(), 'French Press', 3, CURRENT_TIMESTAMP, NULL),
+    (gen_random_uuid(), 'Clever Dripper', 3, CURRENT_TIMESTAMP, NULL),
+    (gen_random_uuid(), 'AeroPress (Inverted)', 3, CURRENT_TIMESTAMP, NULL),
+    (gen_random_uuid(), 'Cold Brew', 3, CURRENT_TIMESTAMP, NULL),
+    (gen_random_uuid(), 'Siphon', 3, CURRENT_TIMESTAMP, NULL),
+    (gen_random_uuid(), 'SoftBrew', 3, CURRENT_TIMESTAMP, NULL),
+
+    -- Category: Traditional (4)
+    (gen_random_uuid(), 'Cezve (Turkish Coffee)', 4, CURRENT_TIMESTAMP, NULL),
+    (gen_random_uuid(), 'Jebena', 4, CURRENT_TIMESTAMP, NULL),
+    (gen_random_uuid(), 'Phin (Vietnamese Drip)', 4, CURRENT_TIMESTAMP, NULL),
+    (gen_random_uuid(), 'Karlsbad Device', 4, CURRENT_TIMESTAMP, NULL);
